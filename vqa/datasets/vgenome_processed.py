@@ -18,7 +18,7 @@ import re
 import math
 import pickle
 
-from .vqa_processed import get_top_answers, remove_examples, tokenize, tokenize_mcb, \
+from vqa_processed import get_top_answers, remove_examples, tokenize, tokenize_mcb, \
                            preprocess_questions, remove_long_tail_train, \
                            encode_question, encode_answer
 

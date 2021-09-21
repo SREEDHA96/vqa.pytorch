@@ -3,12 +3,12 @@ import torch
 import torch.utils.data as data
 import copy
 
-from .images import ImagesFolder, AbstractImagesDataset, default_loader
-from .features import FeaturesDataset
-from .vgenome_interim import vgenome_interim
-from .vgenome_processed import vgenome_processed
-from .coco import default_transform
-from .utils import AbstractVQADataset
+from images import ImagesFolder, AbstractImagesDataset, default_loader
+from features import FeaturesDataset
+from vgenome_interim import vgenome_interim
+from vgenome_processed import vgenome_processed
+from coco import default_transform
+from utils import AbstractVQADataset
 
 def raw(dir_raw):
     dir_img = os.path.join(dir_raw, 'images')

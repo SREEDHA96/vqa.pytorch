@@ -5,9 +5,18 @@ import h5py
 import torch.utils.data as data
 import torchvision.transforms as transforms
 
-from ..lib import utils
-from .images import ImagesFolder, AbstractImagesDataset, default_loader
-from .features import FeaturesDataset
+# importing the importlib.util module
+import importlib.util        
+  
+# passing the file name and path as argument
+spec = importlib.util.spec_from_file_location(
+  "utils", "/content/drive/MyDrive/Colab Notebooks/vqa.pytorch/vqa/lib/utils.py") 
+# importing the module as foo 
+utils = importlib.util.module_from_spec(spec)        
+spec.loader.exec_module(utils)
+
+from images import ImagesFolder, AbstractImagesDataset, default_loader
+from features import FeaturesDataset
 
 def split_name(data_split):
     if data_split in ['train', 'val']:
